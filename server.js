@@ -3,9 +3,8 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Yeeeeeeeaaaaaaaahhh");
-});
+require("./routes/html-routes.js")(app);
+// include api routes
 
 app.listen(PORT, ()=>{
   console.log(`We listenin at PORT: ${PORT}`);
